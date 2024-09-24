@@ -1,0 +1,4 @@
+model_name_or_path: "/home/lgd/common/ComfyUI/models/LLM/qwen/Qwen2___5-7B-Instruct/"
+adapter_name_or_path: /home/lgd/e_commerce_llm/llama_factory_0.9.0/saves/qwen2.5_7b/lora/sft
+template: qwen
+finetuning_type: lora

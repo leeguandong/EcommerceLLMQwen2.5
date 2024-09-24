@@ -1,0 +1,40 @@
+### model
+model_name_or_path: "/home/lgd/common/ComfyUI/models/LLM/qwen/Qwen2___5-7B-Instruct/"
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+
+### dataset
+dataset_dir: "/home/lgd/e_commerce_llm/llama_factory_0.9.0/data/"
+dataset: alpaca_gpt4_data_zh_retained,sft_gpt4_livestreaming_data_20240105,sft_product_extraction_train,sn_generate_gpt_long_title_part0,sn_generate_gpt_long_title_part1,sn_generate_gpt_long_title_part2,sn_generate_gpt_seo_cp,sn_generate_gpt_seo_other,sn_generate_gpt_seo_phb,sn_generate_gpt_seo_zc,sn_generate_gpt_short_title_part0,sn_generate_gpt_short_title_part1,sn_generate_gpt_train_gds_title,sn_generate_gpt_train_multigds_xhs,sn_generate_gpt_train_part0,sn_generate_gpt_train_part1,sn_generate_qwen72b_gds_tj,who_are_you,tiktok_v1
+template: qwen
+cutoff_len: 2048
+max_samples: 3000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: /home/lgd/e_commerce_llm/llama_factory_0.9.0/saves/qwen2.5_7b/lora/sft
+logging_steps: 10
+save_steps: 1000
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-4
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+
+### eval
+val_size: 0.1
+per_device_eval_batch_size: 2
+eval_strategy: steps
+eval_steps: 1000
