@@ -1,6 +1,6 @@
 ## EcommerceLMMQwen2.5
 
-基于电商数据微调的Qwen2.5系列的电商大模型，电商数据sft后电商大模型。是https://github.com/leeguandong/EcommerceLLMQwen2.5的升级版本。人设注入非常好，但是效果确实和之前的模型有所不同。
+基于电商数据微调的Qwen2.5系列的电商大模型，电商数据sft后电商大模型。是https://github.com/leeguandong/EcommerceLLMQwen2.5 的升级版本。人设注入非常好，但是效果确实和之前的模型有所不同。
 
  <p align="center">
       <a href='https://github.com/leeguandong/EcommerceLLMQwen2.5'>
